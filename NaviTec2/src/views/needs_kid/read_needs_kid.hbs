@@ -1,0 +1,52 @@
+{{> navigation_needs_kid }}
+<div class="container p-4">
+    
+    <div class="row">
+
+        {{#each needs_kid}}
+
+            <div class="col-md-3">
+                
+                <div class="card text-center">
+
+                    <div style="background-color: #58D68D" class="card-body">
+
+                        <a href=""> 
+
+                            <h3 class="card-title text-uppercase">  
+
+                              {{kid_id}}      
+
+                            </h3>
+
+                        </a>
+                                <p class = "m-2" > Needs: {{needs}} </p>
+                                <a href="/needs_kid/edit_needs_kid/{{kid_id}}" class="btn btn-primary"> Update  </a>
+                                <a href="/needs_kid/delete/{{kid_id}}" class="btn btn-danger"> Delete </a>
+
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div style="background-color: #D6B957" class="card card-body text-center">
+                    <p> Something went wrong, there's no needs yet</p>
+                    <a href="/needs_kid/add_needs_kid"> Please, Add one!</a>
+                </div>  
+            </div>
+        {{/each}}
+
+    </div>
+
+
+
+</div>
+
+
+
+

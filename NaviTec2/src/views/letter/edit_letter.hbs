@@ -1,0 +1,58 @@
+{{> navigation_letter }}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/letter/edit_letter/{{letter.letter_code}}" method = "POST">
+                        <div class="form-group">
+                            <input type="text" value="{{letter.letter_code}}" class = "form-control" name = "Letter_Code" placeholder="Letter_Code" autofocus required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="date" value="{{letter.date}}" class = "form-control" name = 'Date'  placeholder="Date" required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{letter.kid_id}}" class = "form-control" name = 'Kid_ID'  placeholder="Kid_ID" required>
+                        </div>
+
+                        <br>
+
+                        <center>
+
+                        
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Update
+                            </button>
+                        </center>
+                        </div>
+                    </form>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

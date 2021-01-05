@@ -1,0 +1,51 @@
+{{> navigation_function_assistant}}
+<div class="container p-4" >
+    
+    <div class="row">
+
+        {{#each function_assistant}}
+
+            <div class="col-md-3">
+                
+                <div class="card text-center">
+
+                    <div style="background-color: #AED6F1" class="card-body">
+
+                        <a > 
+
+                            <h3 class="card-title text-uppercase">  
+
+                              {{assistant_id}}      
+
+                            </h3>
+
+                        </a>
+                                <p class = "m-2" > Function Name: {{function_name}} </p>
+                                <a href="/function_assistant/edit_function_assistant/{{assistant_id}}" class="btn btn-primary"> Update  </a>
+                                <a href="/function_assistant/delete/{{assistant_id}}" class="btn btn-danger"> Delete </a>
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div style="background-color: #D6B957" class="card card-body text-center">
+                    <p> Something went wrong, there's no functions yet</p>
+                    <a href="/function_assistant/add_function_assistant"> Please, Add one!</a>
+                </div>  
+            </div>
+        {{/each}}
+
+    </div>
+
+
+
+</div>
+
+
+
+

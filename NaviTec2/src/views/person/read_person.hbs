@@ -1,0 +1,55 @@
+{{> navigation_person}}
+<div class="container p-4" >
+    
+    <div class="row">
+
+        {{#each person}}
+
+            <div class="col-md-3">
+                
+                <div class="card text-center">
+
+                    <div style="background-color: #58D68D" class="card-body">
+
+                        <a> 
+
+                            <h3 class="card-title text-uppercase">  
+
+                              {{nid}}      
+
+                            </h3>
+
+                        </a>
+                                <p class = "m-2" > Email: {{email}} </p>
+                                <p class = "m-2" > Birth Date: {{birth_date}} </p>
+                                <p class = "m-2" > Name: {{name}} </p>
+                                <p class = "m-2" > Lastname: {{lastname}} </p>
+                                <p class = "m-2" > Username: {{username}} </p>
+                                <a href="/person/edit_person/{{nid}}" class="btn btn-primary"> Update  </a>
+                                <a href="/person/delete/{{nid}}" class="btn btn-danger"> Delete </a>
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div style="background-color: #D6B957" class="card card-body text-center">
+                    <p> Something went wrong, there's no persons yet</p>
+                    <a href="/person/add_person"> Please, Add one!</a>
+                </div>  
+            </div>
+        {{/each}}
+
+    </div>
+
+
+
+</div>
+
+
+
+

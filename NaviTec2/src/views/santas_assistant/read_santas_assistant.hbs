@@ -1,0 +1,54 @@
+{{> navigation_santas_assistant}}
+<div class="container p-4">
+    
+    <div class="row">
+
+        {{#each santas_assistant}}
+
+            <div class="col-md-3">
+                
+                <div class="card text-center">
+
+                    <div style="background-color: #7DCEA0" class="card-body">
+
+                        <a href=""> 
+
+                            <h3 class="card-title text-uppercase">  
+
+                              {{name}}      
+
+                            </h3>
+
+                        </a>
+                                <p class = "m-2" > ID: {{assistant_id}} </p>
+                                <p class = "m-2" > Start Date: {{start_date}} </p>
+                                <p class = "m-2" > Username: {{username}} </p>
+                                <a href="/santas_assistant/edit_santas_assistant/{{assistant_id}}" class="btn btn-primary"> Update  </a>
+                                <a href="/santas_assistant/delete/{{assistant_id}}" class="btn btn-danger"> Delete </a>
+
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div style="background-color: #D6B957" class="card card-body text-center">
+                    <p> Something went wrong, there's no santa's assistant yet</p>
+                    <a href="/santas_assistant/add_santas_assistant"> Please, Add one!</a>
+                </div>  
+            </div>
+        {{/each}}
+
+    </div>
+
+
+
+</div>
+
+
+
+

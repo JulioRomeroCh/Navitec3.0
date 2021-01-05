@@ -1,0 +1,52 @@
+{{> navigation_letter}}
+<div class="container p-4" >
+    
+    <div class="row">
+
+        {{#each letter}}
+
+            <div class="col-md-3">
+                
+                <div class="card text-center">
+
+                    <div style="background-color: #58D68D" class="card-body">
+
+                        <a href=""> 
+
+                            <h3 class="card-title text-uppercase">  
+
+                              {{letter_code}}      
+
+                            </h3>
+
+                        </a>
+                                <p class = "m-2" > Date: {{date}} </p>
+                                <p class = "m-2" > Kid ID: {{kid_id}} </p>
+                                <a href="/letter/edit_letter/{{letter_code}}" class="btn btn-primary"> Update  </a>
+                                <a href="/letter/delete/{{letter_code}}" class="btn btn-danger"> Delete </a>
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div style="background-color: #D6B957" class="card card-body text-center">
+                    <p> Something went wrong, there's no letters yet</p>
+                    <a href="/letter/add_letter"> Please, Add one!</a>
+                </div>  
+            </div>
+        {{/each}}
+
+    </div>
+
+
+
+</div>
+
+
+
+

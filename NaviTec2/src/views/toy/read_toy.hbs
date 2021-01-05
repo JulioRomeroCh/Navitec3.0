@@ -1,0 +1,56 @@
+{{> navigation_toy}}
+<div class="container p-4">
+    
+    <div class="row">
+
+        {{#each toy}}
+
+            <div class="col-md-3">
+                
+                <div class="card text-center">
+
+                    <div style="background-color: #7DCEA0" class="card-body">
+
+                        <a href=""> 
+
+                            <h3 class="card-title text-uppercase">  
+
+                              {{name}}      
+
+                            </h3>
+
+                        </a>
+                                <p class = "m-2" > Toy Code: {{toy_code}} </p>
+                                <p class = "m-2" > Age Range: {{age_range}} </p>
+                                <p class = "m-2" > Description: {{description}} </p>
+                                <p class = "m-2" > Photo: {{photo}} </p>
+                                <p class = "m-2" > Cost: {{cost}} </p>
+                                <a href="/toy/edit_toy/{{toy_code}}" class="btn btn-primary"> Update  </a>
+                                <a href="/toy/delete/{{toy_code}}" class="btn btn-danger"> Delete </a>
+
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div style="background-color: #D6B957" class="card card-body text-center">
+                    <p> Something went wrong, there's no toys yet</p>
+                    <a href="/toy/add_toy"> Please, Add one!</a>
+                </div>  
+            </div>
+        {{/each}}
+
+    </div>
+
+
+
+</div>
+
+
+
+

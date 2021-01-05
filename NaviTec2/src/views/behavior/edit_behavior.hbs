@@ -1,0 +1,64 @@
+{{> navigation_behavior }}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/behavior/edit_behavior/{{behavior.behavior_id}}" method = "POST">
+                        <div class="form-group">
+                            <input type="text" value="{{behavior.behavior_id}}" class = "form-control" name = "Behavior_ID" placeholder="Behavior_ID" autofocus required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="datetime-local" value="{{behavior.date}}" class = "form-control" name = 'Date'  placeholder="Date" required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{behavior.indication}}" class = "form-control" name = 'Indication'  placeholder="Indication" required>
+                        </div>
+
+                        <br>
+
+                        
+                        <div class="form-group">
+                            <input type="text" value="{{behavior.description}}" class = "form-control" name = 'Description'  placeholder="Description" required>
+                        </div>
+
+                        <br>
+                        <center>
+
+                        
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Update
+                            </button>
+                        </center>
+                        </div>
+                    </form>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+{{> navigation_user}}
+<div class="container p-4">
+    
+    <div class="row">
+
+        {{#each user}}
+
+            <div class="col-md-3">
+                
+                <div class="card text-center">
+
+                    <div style="background-color: #7DCEA0" class="card-body">
+
+                        <a> 
+
+                            <h3 class="card-title text-uppercase">  
+
+                              {{username}}      
+
+                            </h3>
+
+                        </a>
+                                
+                                <p class = "m-2" > Role: {{role}} </p>
+                                <a href="/user/edit_user/{{username}}" class="btn btn-primary"> Update  </a>
+                                <a href="/user/delete/{{username}}" class="btn btn-danger"> Delete </a>
+
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div style="background-color: #D6B957" class="card card-body text-center">
+                    <p> Something went wrong, there's no users yet</p>
+                    <a href="/user/add_user"> Please, Add one!</a>
+                </div>  
+            </div>
+        {{/each}}
+
+    </div>
+
+
+
+</div>
+
+
+
+

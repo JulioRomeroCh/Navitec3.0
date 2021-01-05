@@ -1,0 +1,64 @@
+{{> navigation_santas_assistant }}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/santas_assistant/edit_santas_assistant/{{santas_assistant.assistant_id}}" method = "POST">
+                        <div class="form-group">
+                            <input type="text" value="{{santas_assistant.assistant_id}}" class = "form-control" name = "Assistant_ID" placeholder="Assistant_ID" autofocus required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{santas_assistant.name}}" class = "form-control" name = 'Name'  placeholder="Name" required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="date" value="{{santas_assistant.start_date}}" class = "form-control" name = 'Start_Date'  placeholder="Start_Date" required>
+                        </div>
+
+                        <br>
+
+                        
+                        <div class="form-group">
+                            <input type="text" value="{{santas_assistant.username}}" class = "form-control" name = 'Username'  placeholder="Username" required>
+                        </div>
+
+                        <br>
+                        <center>
+
+                        
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Update
+                            </button>
+                        </center>
+                        </div>
+                    </form>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

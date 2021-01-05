@@ -1,0 +1,52 @@
+{{> navigation_needs_kid }}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/needs_kid/edit_needs_kid/{{needs_kid.kid_id}}" method = "POST">
+                        <div class="form-group">
+                            <input type="text" value="{{needs_kid.kid_id}}" class = "form-control" name = "Kid_ID" placeholder="Kid_ID" autofocus required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{needs_kid.needs}}" class = "form-control" name = 'Needs'  placeholder="Needs" required>
+                        </div>
+
+                        <br>
+                        <center>
+
+                        
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Update
+                            </button>
+                        </center>
+                        </div>
+                    </form>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+{{> navigation_person }}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/person/edit_person/{{person.nid}}" method = "POST">
+                        <div class="form-group">
+                            <input type="number" value="{{person.nid}}" class = "form-control" name = "Nid" placeholder="Nid" autofocus required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="email" value="{{person.email}}" class = "form-control" name = 'Email'  placeholder="Email" required>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input type="date" value="{{person.birth_date}}" class = "form-control" name = 'Birth_Date'  placeholder="Birth_Date" required>
+                        </div>
+
+                        
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{person.name}}" class = "form-control" name = 'Name'  placeholder="Name" required>
+                        </div>
+
+                        
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{person.lastname}}" class = "form-control" name = 'Lastname'  placeholder="Lastname" required>
+                        </div>
+
+                        
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{person.username}}" class = "form-control" name = 'Username'  placeholder="Username" required>
+                        </div>
+
+                        <br>
+
+                        <center>
+
+                        
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Update
+                            </button>
+                        </center>
+                        </div>
+                    </form>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
